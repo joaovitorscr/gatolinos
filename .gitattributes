@@ -1,0 +1,2 @@
+# git autocrlf=true converts LF to CRLF on Windows
+* text=auto eol=lf

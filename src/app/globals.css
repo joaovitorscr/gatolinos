@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: #f9f9f9;
+  --color-foreground: #1a1c1c;
+  --color-primary: #00464a;
+  --color-primary-container: #006064;
+  --color-primary-fixed: #a6eff3;
+  --color-secondary: #855324;
+  --color-secondary-container: #febc83;
+  --color-secondary-fixed: #ffdcc1;
+  --color-tertiary: #6d2a15;
+  --color-tertiary-fixed: #ffdbd0;
+  --color-surface: #f9f9f9;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface-variant: #3f4949;
+  --color-on-secondary-container: #79491b;
+  --color-outline: #6f7979;
+  --color-outline-variant: #bec8c9;
+  --font-sans: var(--font-plus-jakarta-sans);
+  --font-headline: var(--font-manrope);
+  --font-label: var(--font-manrope);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-background);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(166, 239, 243, 0.7);
+  color: var(--color-foreground);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-rise {
+    animation: rise 700ms ease-out both;
+  }
+
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
 }

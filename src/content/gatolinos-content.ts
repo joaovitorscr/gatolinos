@@ -56,21 +56,21 @@ export const valuePillars: ValuePillar[] = [
     description:
       "O vínculo mais importante do projeto. Com contribuições recorrentes, conseguimos manter cuidado constante e previsível para os gatos acolhidos.",
     icon: "medical",
-    tintClassName: "bg-[color:rgba(0,70,74,0.06)]",
+    tintClassName: "bg-secondary-container",
   },
   {
     title: "Cuidado do dia a dia",
     description:
       "Ração de qualidade, sachês, areia sanitária e pequenos mimos que deixam a rotina mais segura, limpa e confortável.",
     icon: "social",
-    tintClassName: "bg-[color:rgba(254,188,131,0.16)]",
+    tintClassName: "bg-primary-fixed/55",
   },
   {
     title: "Rede de amor felino",
     description:
       "O Projeto Gatolinos sobrevive de doações e trabalho voluntário de quem ama os felinos de Londrina e acredita em mudança real.",
     icon: "tnr",
-    tintClassName: "bg-[color:rgba(255,219,208,0.7)]",
+    tintClassName: "bg-tertiary-container",
   },
 ];
 
@@ -83,7 +83,7 @@ export const adoptionCategories: AdoptionCategory[] = [
     imageAlt:
       "Gato adulto sentado em luz suave, com pelagem bem cuidada e olhar sereno",
     overlayClassName:
-      "bg-[linear-gradient(to_top,rgba(0,70,74,0.92),rgba(0,70,74,0.22),transparent)]",
+      "bg-[linear-gradient(to_top,rgba(37,18,2,0.92),rgba(37,18,2,0.22),transparent)]",
   },
   {
     title: "Resgatados que pedem colo",
@@ -92,7 +92,7 @@ export const adoptionCategories: AdoptionCategory[] = [
     image: "/gatolinos/special-needs.png",
     imageAlt: "Gato em ambiente acolhedor, transmitindo resiliência e doçura",
     overlayClassName:
-      "bg-[linear-gradient(to_top,rgba(109,42,21,0.92),rgba(109,42,21,0.18),transparent)]",
+      "bg-[linear-gradient(to_top,rgba(17,47,53,0.92),rgba(17,47,53,0.2),transparent)]",
   },
   {
     title: "Duplas inseparáveis",
@@ -100,7 +100,7 @@ export const adoptionCategories: AdoptionCategory[] = [
     image: "/gatolinos/bonded-pairs.png",
     imageAlt: "Dois gatinhos abraçados, dormindo juntos em uma almofada macia",
     overlayClassName:
-      "bg-[linear-gradient(to_top,rgba(133,83,36,0.92),rgba(133,83,36,0.18),transparent)]",
+      "bg-[linear-gradient(to_top,rgba(108,87,117,0.92),rgba(108,87,117,0.2),transparent)]",
   },
 ];
 

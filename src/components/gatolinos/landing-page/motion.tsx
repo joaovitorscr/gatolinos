@@ -9,7 +9,7 @@ import {
 import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
-const easeOut = [0.22, 1, 0.36, 1] as const;
+export const easeOut = [0.22, 1, 0.36, 1] as const;
 
 type RevealProps = ComponentProps<typeof motion.div> & {
   delay?: number;

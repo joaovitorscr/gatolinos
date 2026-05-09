@@ -1,8 +1,9 @@
+import { Reveal } from "../motion";
 import { SectionIntro } from "../section-intro";
 
 export function ValuePillarsSectionIntro() {
   return (
-    <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+    <Reveal className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
       <SectionIntro>
         <SectionIntro.Title>
           Um projeto movido por amor e constância
@@ -13,6 +14,6 @@ export function ValuePillarsSectionIntro() {
         </SectionIntro.Description>
       </SectionIntro>
       <div className="hidden h-px flex-1 bg-outline-variant/60 lg:block" />
-    </div>
+    </Reveal>
   );
 }

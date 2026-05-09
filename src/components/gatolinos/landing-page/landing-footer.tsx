@@ -3,6 +3,7 @@ import type { ComponentProps } from "react";
 import { navigationItems } from "@/content/gatolinos-content";
 import { cn } from "@/lib/utils";
 import { BrandLogo } from "./brand-logo";
+import { Reveal, RevealItem, RevealStagger } from "./motion";
 import { shellClassName } from "./shell";
 
 export function LandingFooter({
@@ -19,32 +20,33 @@ export function LandingFooter({
       {...props}
     >
       <div className={`${shellClassName} flex flex-col gap-12`}>
-        <div className="flex flex-col gap-2 lg:items-center lg:justify-between">
+        <Reveal className="flex flex-col gap-2 lg:items-center lg:justify-between">
           <div className="flex items-center">
             <BrandLogo className="h-16 w-[11rem]" />
           </div>
-          <p className="mt-4 text-sm leading-7 text-on-surface-variant mx-auto">
+          <p className="mx-auto mt-4 text-sm leading-7 text-on-surface-variant">
             Um cantinho sustentado por doações, trabalho voluntário e muito amor
             pelos felinos de Londrina.
           </p>
-        </div>
+        </Reveal>
 
-        <nav className="flex items-center justify-center space-x-6">
+        <RevealStagger className="flex items-center justify-center space-x-6">
           {navigationItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="font-label w-fit text-[0.6rem] font-bold uppercase tracking-[0.22em] text-on-surface-variant transition-colors duration-200 hover:text-primary"
-            >
-              {item.label}
-            </Link>
+            <RevealItem key={item.href} distance={16}>
+              <Link
+                href={item.href}
+                className="font-label w-fit text-[0.6rem] font-bold uppercase tracking-[0.22em] text-on-surface-variant transition-colors duration-200 hover:text-primary"
+              >
+                {item.label}
+              </Link>
+            </RevealItem>
           ))}
-        </nav>
+        </RevealStagger>
 
-        <div className="flex flex-col gap-3 border-t border-outline-variant/40 pt-8 font-label text-[0.62rem] font-bold uppercase tracking-[0.28em] text-outline sm:flex-row sm:items-center sm:justify-between">
+        <Reveal className="flex flex-col gap-3 border-t border-outline-variant/40 pt-8 font-label text-[0.62rem] font-bold uppercase tracking-[0.28em] text-outline sm:flex-row sm:items-center sm:justify-between">
           <p>Projeto Gatolinos</p>
           <p>Londrina, Paraná</p>
-        </div>
+        </Reveal>
       </div>
     </footer>
   );

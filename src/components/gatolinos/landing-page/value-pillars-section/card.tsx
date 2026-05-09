@@ -4,6 +4,7 @@ import {
   ReloadIcon,
 } from "@hugeicons/core-free-icons";
 import { AppIcon } from "@/components/gatolinos/app-icon";
+import { RevealItem } from "../motion";
 import { PillarCard } from "../pillar-card";
 
 type ValuePillarCardIcon = "medical" | "social" | "tnr";
@@ -42,12 +43,14 @@ export function ValuePillarsSectionCard({
   icon,
 }: ValuePillarsSectionCardProps) {
   return (
-    <PillarCard>
-      <PillarCard.Icon tintClassName={tintClassName}>
-        {renderIcon(icon)}
-      </PillarCard.Icon>
-      <PillarCard.Title>{title}</PillarCard.Title>
-      <PillarCard.Description>{description}</PillarCard.Description>
-    </PillarCard>
+    <RevealItem className="h-full">
+      <PillarCard className="h-full">
+        <PillarCard.Icon tintClassName={tintClassName}>
+          {renderIcon(icon)}
+        </PillarCard.Icon>
+        <PillarCard.Title>{title}</PillarCard.Title>
+        <PillarCard.Description>{description}</PillarCard.Description>
+      </PillarCard>
+    </RevealItem>
   );
 }

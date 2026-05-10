@@ -79,7 +79,6 @@ export default function RootLayout({
     alternateName: siteConfig.shortName,
     url: siteConfig.url,
     logo: absoluteUrl(siteConfig.logo),
-    email: siteConfig.email,
     areaServed: {
       "@type": "City",
       name: "Londrina",

@@ -18,7 +18,7 @@ export const siteConfig = {
     "ONG de gatos Londrina",
   ],
   logo: "/gatolinos/logo.png",
-  socialImage: "/opengraph-image",
+  socialImage: "/gatolinos/social-image.png",
   location: "Londrina, Paraná",
 };
 
@@ -61,6 +61,8 @@ export function buildPageMetadata({
       images: [
         {
           url: imageUrl,
+          secureUrl: imageUrl,
+          type: "image/png",
           width: 1200,
           height: 630,
           alt: `${siteConfig.name} - adoção e apadrinhamento de gatos em Londrina`,

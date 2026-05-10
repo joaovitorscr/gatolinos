@@ -41,7 +41,6 @@ export async function generateMetadata({ params }: CatProfilePageProps): Promise
     title: cat.name,
     description: `${cat.summary} Conheça a história, personalidade e cuidados para adoção responsável ou apadrinhamento em Londrina.`,
     path: `/gatos/${cat.slug}`,
-    image: cat.image,
     type: "article",
   });
 }

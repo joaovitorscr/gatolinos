@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
-import "./globals.css";
 import { Toaster } from "sonner";
+
+import "./globals.css";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { SiteHeader } from "@/components/layout/site-header";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -34,8 +37,10 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${manrope.variable} ${plusJakartaSans.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex flex-col">
+        <SiteHeader />
         {children}
+        <SiteFooter />
         <Toaster />
       </body>
     </html>

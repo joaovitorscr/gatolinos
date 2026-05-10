@@ -1,31 +1,13 @@
-import { LandingPage } from "@/components/gatolinos/landing-page";
+import { DonationSection } from "@/app/_components/donation-section";
+import { HeroSection } from "@/app/_components/hero-section";
+import { ValuePillarsSection } from "@/app/_components/value-pillars-section";
 
 export default function Home() {
   return (
-    <LandingPage>
-      <LandingPage.Header />
-      <LandingPage.Main>
-        <LandingPage.Hero />
-
-        <LandingPage.ValuePillars>
-          <LandingPage.ValuePillars.Intro />
-          <LandingPage.ValuePillars.Grid>
-            <LandingPage.ValuePillars.Cards />
-          </LandingPage.ValuePillars.Grid>
-        </LandingPage.ValuePillars>
-
-        {/* <LandingPage.AdoptionGallery />
-        <LandingPage.Transparency /> */}
-
-        <LandingPage.Donation>
-          <LandingPage.Donation.Intro />
-          <LandingPage.Donation.Grid>
-            <LandingPage.Donation.PixCard />
-            <LandingPage.Donation.RecurringCard />
-          </LandingPage.Donation.Grid>
-        </LandingPage.Donation>
-      </LandingPage.Main>
-      <LandingPage.Footer />
-    </LandingPage>
+    <main className="overflow-x-hidden">
+      <HeroSection />
+      <ValuePillarsSection />
+      <DonationSection />
+    </main>
   );
 }

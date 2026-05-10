@@ -11,13 +11,15 @@ import {
 } from "@/components/layout/section-intro";
 import { adoptionCategories, catsForAdoption } from "@/content/gatolinos-content";
 import { Reveal, RevealItem, RevealStagger } from "@/lib/motion";
+import { buildPageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "Gatos para adoção | Projeto Gatolinos Londrina",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Gatos para adoção",
   description:
-    "Conheça os gatos acolhidos pelo Projeto Gatolinos e abra o perfil de cada um para adoção responsável ou apadrinhamento.",
-};
+    "Conheça os gatos acolhidos pelo Projeto Gatolinos em Londrina e abra cada perfil para adoção responsável ou apadrinhamento.",
+  path: "/gatos",
+});
 
 export default function CatsPage() {
   const totalCats = catsForAdoption.length;

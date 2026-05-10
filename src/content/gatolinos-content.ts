@@ -67,7 +67,7 @@ type SocialLink = {
 
 export const siteNavigationItems: NavigationItem[] = [
   { label: "Projeto", href: "/#abordagem" },
-  { label: "Gatos", href: "/gatos" },
+  // { label: "Gatos", href: "/gatos" },
   { label: "Como ajudar", href: "/#contribuir" },
 ];
 
@@ -103,19 +103,16 @@ export const adoptionCategories: AdoptionCategory[] = [
   {
     slug: "adultos-carinhosos",
     title: "Adultos cheios de carinho",
-    description:
-      "Companheiros tranquilos, afetuosos e prontos para conquistar um lar.",
+    description: "Companheiros tranquilos, afetuosos e prontos para conquistar um lar.",
     image: "/gatolinos/adults.png",
-    imageAlt:
-      "Gato adulto sentado em luz suave, com pelagem bem cuidada e olhar sereno",
+    imageAlt: "Gato adulto sentado em luz suave, com pelagem bem cuidada e olhar sereno",
     overlayClassName:
       "bg-[linear-gradient(to_top,rgba(37,18,2,0.92),rgba(37,18,2,0.22),transparent)]",
   },
   {
     slug: "resgatados-especiais",
     title: "Resgatados que pedem colo",
-    description:
-      "Histórias de superação, doçura e recomeços que merecem finais felizes.",
+    description: "Histórias de superação, doçura e recomeços que merecem finais felizes.",
     image: "/gatolinos/special-needs.png",
     imageAlt: "Gato em ambiente acolhedor, transmitindo resiliência e doçura",
     overlayClassName:
@@ -138,8 +135,7 @@ export const catsForAdoption: CatProfile[] = [
     name: "Amélia",
     categorySlug: "adultos-carinhosos",
     image: "/gatolinos/adults.png",
-    imageAlt:
-      "Gata adulta em pose elegante, com olhar calmo e ambiente iluminado",
+    imageAlt: "Gata adulta em pose elegante, com olhar calmo e ambiente iluminado",
     accentClassName: "from-[#251202] via-[#553118] to-[#9e6945]",
     age: "3 anos",
     location: "Londrina, PR",
@@ -168,8 +164,7 @@ export const catsForAdoption: CatProfile[] = [
     name: "Bento",
     categorySlug: "adultos-carinhosos",
     image: "/gatolinos/adults.png",
-    imageAlt:
-      "Gato adulto descansando de forma confortável, com expressão dócil",
+    imageAlt: "Gato adulto descansando de forma confortável, com expressão dócil",
     accentClassName: "from-[#3d2611] via-[#815230] to-[#f2d6fa]",
     age: "5 anos",
     location: "Londrina, PR",
@@ -198,15 +193,13 @@ export const catsForAdoption: CatProfile[] = [
     name: "Flora",
     categorySlug: "resgatados-especiais",
     image: "/gatolinos/special-needs.png",
-    imageAlt:
-      "Gata resgatada em ambiente acolhedor, transmitindo doçura e resistência",
+    imageAlt: "Gata resgatada em ambiente acolhedor, transmitindo doçura e resistência",
     accentClassName: "from-[#001a1f] via-[#14464e] to-[#7ab9c8]",
     age: "2 anos",
     location: "Londrina, PR",
     rescueStory:
       "Flora foi encontrada em recuperação após um período difícil na rua. Hoje responde muito bem a cuidados constantes e se mostra cada dia mais segura perto de pessoas.",
-    summary:
-      "Delicada e resiliente, é a gata ideal para quem entende que amor também é paciência.",
+    summary: "Delicada e resiliente, é a gata ideal para quem entende que amor também é paciência.",
     personality: [
       "Observadora e sensível a novos estímulos",
       "Adora voz baixa e toque gentil",
@@ -228,8 +221,7 @@ export const catsForAdoption: CatProfile[] = [
     name: "Nino",
     categorySlug: "resgatados-especiais",
     image: "/gatolinos/special-needs.png",
-    imageAlt:
-      "Gato resgatado com olhar atento, demonstrando recuperação e afeto",
+    imageAlt: "Gato resgatado com olhar atento, demonstrando recuperação e afeto",
     accentClassName: "from-[#112f35] via-[#2a5f69] to-[#c9e8f0]",
     age: "4 anos",
     location: "Londrina, PR",
@@ -258,15 +250,13 @@ export const catsForAdoption: CatProfile[] = [
     name: "Luna & Simão",
     categorySlug: "duplas-inseparaveis",
     image: "/gatolinos/bonded-pairs.png",
-    imageAlt:
-      "Dois gatos deitados juntos, demonstrando vínculo forte e sensação de aconchego",
+    imageAlt: "Dois gatos deitados juntos, demonstrando vínculo forte e sensação de aconchego",
     accentClassName: "from-[#6c5775] via-[#8a7295] to-[#e6d5eb]",
     age: "1 ano e 8 meses",
     location: "Londrina, PR",
     rescueStory:
       "Luna e Simão chegaram juntos e nunca mais se separaram. Um regula a coragem do outro, e a dupla encontrou segurança justamente no vínculo que construíram.",
-    summary:
-      "Para quem quer adotar afeto em dose dupla e preservar um laço que já é casa.",
+    summary: "Para quem quer adotar afeto em dose dupla e preservar um laço que já é casa.",
     personality: [
       "Dormem juntos e exploram o ambiente em parceria",
       "Têm energia leve e comportamento muito conectado",
@@ -365,10 +355,7 @@ export const donationOptions: DonationOption[] = [
     description:
       "Um compromisso de amor que ajuda a garantir previsibilidade para alimentação, higiene e cuidados essenciais.",
     pixKey: "",
-    tiers: [
-      { label: "R$ 50 / mês" },
-      { label: "R$ 100 / mês", emphasized: true },
-    ],
+    tiers: [{ label: "R$ 50 / mês" }, { label: "R$ 100 / mês", emphasized: true }],
   },
 ];
 

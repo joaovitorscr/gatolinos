@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 
 import { catsForAdoption, getCatBySlug, getCategoryBySlug } from "@/content/gatolinos-content";
 import { Reveal, RevealItem, RevealStagger } from "@/lib/motion";
+import { absoluteUrl, buildPageMetadata, siteConfig } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 import { profileMailTo } from "../page";
@@ -29,13 +30,20 @@ export async function generateMetadata({ params }: CatProfilePageProps): Promise
   if (!cat) {
     return {
       title: "Gato não encontrado | Projeto Gatolinos Londrina",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
-  return {
-    title: `${cat.name} | Projeto Gatolinos Londrina`,
-    description: cat.summary,
-  };
+  return buildPageMetadata({
+    title: cat.name,
+    description: `${cat.summary} Conheça a história, personalidade e cuidados para adoção responsável ou apadrinhamento em Londrina.`,
+    path: `/gatos/${cat.slug}`,
+    image: cat.image,
+    type: "article",
+  });
 }
 
 export default async function CatSlugPage({ params }: CatProfilePageProps) {
@@ -46,9 +54,35 @@ export default async function CatSlugPage({ params }: CatProfilePageProps) {
     notFound();
   }
   const category = getCategoryBySlug(cat.categorySlug);
+  const profileJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `${cat.name} para adoção`,
+    url: absoluteUrl(`/gatos/${cat.slug}`),
+    description: cat.summary,
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    about: {
+      "@type": "AnimalShelter",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: absoluteUrl(cat.image),
+      caption: cat.imageAlt,
+    },
+  };
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profileJsonLd) }}
+      />
       <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16">
         <div className="animate-float absolute inset-x-0 top-0 h-136 bg-[radial-gradient(circle_at_top_left,rgba(255,220,193,0.75),transparent_42%),radial-gradient(circle_at_top_right,rgba(201,232,240,0.65),transparent_42%)]" />
         <div className="relative default-shell">

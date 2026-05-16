@@ -100,9 +100,9 @@ bun fmt:check  # verifica a formatação sem alterar arquivos
 
 ## ⚙️ Variáveis de Ambiente
 
-| Variável | Obrigatória | Descrição |
-| --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Não | URL pública usada para canonical URLs, Open Graph, sitemap e robots. Valor padrão: `https://projetogatolinos.com.br`. |
+| Variável               | Obrigatória | Descrição                                                                                                             |
+| ---------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | Não         | URL pública usada para canonical URLs, Open Graph, sitemap e robots. Valor padrão: `https://projetogatolinos.com.br`. |
 
 Exemplo:
 
@@ -200,3 +200,7 @@ bun build
 ## 📄 Licença
 
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+---
+
+Last deployed at: 2026-05-08 13:21:41 UTC

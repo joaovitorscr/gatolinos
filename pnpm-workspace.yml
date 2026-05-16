@@ -1,0 +1,1 @@
+minimumReleaseAge: 4320 # 3 Days - Important to mitigate supply chain attacks from npm packages

@@ -99,7 +99,7 @@ export function HeroSection() {
             }}
           >
             <PrimaryLink href="#contribuir">Segure nossa patinha</PrimaryLink>
-            <SecondaryLink href="/gatos">Ver gatos para adoção</SecondaryLink>
+            {/* <SecondaryLink href="/gatos">Ver gatos para adoção</SecondaryLink> */}
           </motion.div>
         </motion.div>
 

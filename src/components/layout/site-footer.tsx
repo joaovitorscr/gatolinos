@@ -1,3 +1,5 @@
+import { InstagramIcon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 import type { ComponentProps } from "react";
 
@@ -47,6 +49,11 @@ export function SiteFooter({ className, ...props }: ComponentProps<"footer">) {
             className="flex flex-col gap-3 text-center font-label text-[0.62rem] font-bold uppercase tracking-[0.28em] text-outline sm:flex-row sm:items-center sm:justify-between sm:text-left"
           >
             <p>Projeto Gatolinos</p>
+
+            <Link href="https://instagram.com/projeto.gatolinos" target="_blank">
+              <HugeiconsIcon icon={InstagramIcon} />
+            </Link>
+
             <p>Londrina, Paraná</p>
           </Reveal>
         </div>
